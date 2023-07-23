@@ -47,11 +47,12 @@ public class EcuacionLineal {
             
             //¿La pendiente es igual a 0?
             if (pendiente == 0){
+                // Si la función es constante entonces termina el programa
                 System.out.println("La función es una constante");
+                return;
                 // Es x1 o x2 = 0?
             }else if(x1 == 0 || x2 == 0){
                 // Revisa cual de las dos x es la que es igual a 0
-
                 double condiX = xCero(x1,x2);
 
                 // Se le asigna a la b, la y de la x que es = 0
