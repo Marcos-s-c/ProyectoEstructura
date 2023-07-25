@@ -1,22 +1,33 @@
 import java.util.Scanner;
 
 public class main {
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        int opcion;
 
-        System.out.println("¿Qué función desea utilizar?");
-        System.out.println("1. Calcular Ecuación Lineal");
-        System.out.println("2. Verificar Alquiler de Local");
+        do {
+            System.out.println("¿Qué función desea utilizar?");
+            System.out.println("1. Calcular Ecuación Lineal");
+            System.out.println("2. Verificar Alquiler de Local");
+            System.out.println("3. Salir");
 
-        int opcion = scanner.nextInt();
-        if (opcion == 1) {
-            calcularEcuacionLineal();
-        } else if (opcion == 2) {
-            verificarAlquilerLocal();
-        } else {
-            System.out.println("Opción inválida. Por favor, ingrese 1 o 2.");
-        }
+            opcion = scanner.nextInt();
+
+            switch (opcion) {
+                case 1:
+                    calcularEcuacionLineal();
+                    break;
+                case 2:
+                    verificarAlquilerLocal();
+                    break;
+                case 3:
+                    System.out.println("Gracias por usar el programa. ¡Hasta luego!");
+                    break;
+                default:
+                    System.out.println("Opción inválida. Por favor, ingrese 1, 2 o 3.");
+                    break;
+            }
+        } while (opcion != 3);
     }
 
     public static void verificarAlquilerLocal() {
